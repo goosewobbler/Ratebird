@@ -1,8 +1,0 @@
-<!ENTITY ratebird.window.progress.caption "Progress">
-<!ENTITY ratebird.window.title "Ratebird">
-<!ENTITY ratebird.window.getlist "Download RYM Ratings List">
-<!ENTITY ratebird.window.getlist.tooltip "Get your current list of ratings from RYM">
-<!ENTITY ratebird.window.getratings "Rate Items">
-<!ENTITY ratebird.window.getratings.tooltip "Apply ratings from RYM to the currently selected files">
-<!ENTITY ratebird.window.clearoutput.tooltip "Clear output pane">
-<!ENTITY ratebird.window.clearoutput "Clear Output Pane">
