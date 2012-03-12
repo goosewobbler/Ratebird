@@ -1,0 +1,11 @@
+content ratebird  chrome/content/
+locale  ratebird  en-US  chrome/locale/en-US/
+skin    ratebird  classic/1.0 chrome/skin/
+
+overlay windowtype:Songbird:MediaPage chrome://ratebird/content/overlayPlaylist.xul
+overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul chrome://ratebird/content/scripts-overlay.xul
+overlay chrome://songbird/content/xul/layoutWithBrowserOverlay.xul chrome://ratebird/content/script-compiler-overlay.xul
+
+
+
+
