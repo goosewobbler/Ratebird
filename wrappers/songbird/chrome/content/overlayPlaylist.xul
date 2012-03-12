@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE window SYSTEM "chrome://ratebird/locale/overlay.dtd">
+
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="songbird_menu_overlay222"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <!--
+  This file is enabled by the chrome.manifest line:
+  overlay windowtype:Songbird:MediaPage chrome://context-menu-test/content/overlayPlaylist.xul
+  And will be applied to __ALL__ properly implemented playlist instances.
+  -->
+
+  <!-- Into the Playlist context popup menu, before the separator -->
+  <popup id="sb-playlist-popup" onpopupshowing="ratebird_displayCMItems()">
+
+      <menuitem
+        id="LibCMRateThis"
+        label="&ratebird.getRatings.label;"
+        insertbefore="playlist_context_before"
+        oncommand="rb.rate('context_menu')"
+        hidden="false"/>
+      <menuitem
+        id="LibCMFindRelease"        
+        label="&ratebird.findRelease.label;"
+        insertbefore="playlist_context_before"
+        oncommand="ratebird_findRelease()"
+        hidden="false"/>
+
+  </popup>
+  
+  <script type="text/javascript;version=1.8" src="scripts/ratebird_functions.js"/>
+  <script type="text/javascript;version=1.8" src="scripts/ratebird.js"/>
+  <script type="text/javascript;version=1.8" src="scripts/overlayPlaylist.js"/>
+</overlay>

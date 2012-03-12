@@ -1,0 +1,25 @@
+<!ENTITY prefwindow.title "Ratebird Preferences">
+<!ENTITY pane1.title "Ratebird Preferences">
+
+<!ENTITY basic_prefs.label "Basic">
+<!ENTITY basic_prefs.username.label "RYM Username: ">
+<!ENTITY basic_prefs.username.accesskey "U">
+<!ENTITY basic_prefs.round_dir.description "Round Ratings:">
+<!ENTITY basic_prefs.round_dir.up.label "Up">
+<!ENTITY basic_prefs.round_dir.down.label "Down">
+
+<!ENTITY advanced_prefs.label "Advanced">
+<!ENTITY advanced_prefs.write_ratings.label "Write ratings to media files">
+<!ENTITY advanced_prefs.confirm_ratings.label "Confirm before retrieving ratings">
+<!ENTITY advanced_prefs.display_libcm_ratethis.label "Display 'Get ratings' option in library context menu for media files">
+<!ENTITY advanced_prefs.display_libcm_findrelease.label "Display 'Find relevant releases' option in library context menu for media files">
+
+<!ENTITY rym_site_enhancer_prefs.label "RYM Site Enhancer">
+<!ENTITY rym_site_enhancer_prefs.description "These let you tweak certain aspects of the RYM site.">
+<!ENTITY rym_site_enhancer_prefs.ratings_10scale.label "Use 1-10 scale for ratings">
+<!ENTITY rym_site_enhancer_prefs.artist_averageratings.label "Add average ratings to artist pages">
+<!ENTITY rym_site_enhancer_prefs.artist_showsplitratings.label "Show your ratings for split and various artist releases on artist pages">
+<!ENTITY rym_site_enhancer_prefs.ratings_colour.label "Add colour to ratings">
+<!ENTITY rym_site_enhancer_prefs.lists_highlightrated.label "Highlight rated records in lists &amp; charts">
+<!ENTITY rym_site_enhancer_prefs.lists_highlightowned.label "Highlight owned records in lists &amp; charts">
+<!ENTITY rym_site_enhancer_prefs.lists_highlightwishlisted.label "Highlight wishlist records in lists &amp; charts">

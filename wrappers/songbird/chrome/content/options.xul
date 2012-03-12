@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://ratebird/locale/options.dtd">
+<!-- OPTIONS WINDOW - Specified in install.rdf, launched from the Extension Manager -->
+<prefwindow id="ratebirdPreferences" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+  <prefpane id="pane1" label="&pane1.title;">
+    <preferences>
+      <preference id="username" name="extensions.ratebird.username" type="string"/> <!-- note that this is only an ASCII string - use unichar for unicode strings -->
+      <preference id="round_dir" name="extensions.ratebird.round_dir" type="string"/>
+      <preference id="ratings_list" name="extensions.ratebird.ratings_list" type="string"/>
+      <preference id="write_ratings" name="songbird.metadata.ratings.enableWriting" type="bool"/>
+      <preference id="confirm_ratings" name="extensions.ratebird.confirmRatings" type="bool"/>
+      <preference id="display_libcm_ratethis" name="extensions.ratebird.displayLibCMRateThis" type="bool"/>
+      <preference id="display_libcm_findrelease" name="extensions.ratebird.displayLibCMFindRelease" type="bool"/>
+      <preference id="RYMEnhancer_ratings_10scale" name="extensions.ratebird.RYMEnhancer_ratings_10scale" type="bool"/>
+      <preference id="RYMEnhancer_artist_averageratings" name="extensions.ratebird.RYMEnhancer_artist_averageratings" type="bool"/>
+      <preference id="RYMEnhancer_ratings_colour" name="extensions.ratebird.RYMEnhancer_ratings_colour" type="bool"/>
+      <preference id="RYMEnhancer_lists_highlightrated" name="extensions.ratebird.RYMEnhancer_lists_highlightrated" type="bool"/>
+      <preference id="RYMEnhancer_lists_highlightowned" name="extensions.ratebird.RYMEnhancer_lists_highlightowned" type="bool"/>
+      <preference id="RYMEnhancer_lists_highlightwishlisted" name="extensions.ratebird.RYMEnhancer_lists_highlightwishlisted" type="bool"/>
+      <preference id="RYMEnhancer_artist_showsplitratings" name="extensions.ratebird.RYMEnhancer_artist_showsplitratings" type="bool"/>
+    </preferences>
+    
+  <hbox>
+    <groupbox flex="1">
+      <caption label="&basic_prefs.label;" />
+      <label accesskey="&basic_prefs.username.accesskey;" control="textusername">&basic_prefs.username.label;</label>
+      <textbox id="textusername" preference="username"/>
+      <radiogroup id="round_direction" preference="round_dir">
+        <description value="&basic_prefs.round_dir.description;"/>
+        <radio label="&basic_prefs.round_dir.up.label;" value="up" />
+        <radio label="&basic_prefs.round_dir.down.label;" value="down" />
+      </radiogroup>
+    </groupbox>
+    <groupbox flex="1">
+      <caption label="&advanced_prefs.label;" />
+      <checkbox flex="1" label="&advanced_prefs.write_ratings.label;" preference="write_ratings" />
+      <checkbox flex="1" label="&advanced_prefs.confirm_ratings.label;" preference="confirm_ratings" />
+      <checkbox flex="1" label="&advanced_prefs.display_libcm_findrelease.label;" preference="display_libcm_findrelease" />
+      <checkbox flex="1" label="&advanced_prefs.display_libcm_ratethis.label;" preference="display_libcm_ratethis" />
+    </groupbox>
+  </hbox>
+  <spacer flex="1" />
+  <hbox>
+    <groupbox flex="1">
+  <caption label="&rym_site_enhancer_prefs.label;" />
+  <vbox flex="1">
+    <description value="&rym_site_enhancer_prefs.description;" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.ratings_10scale.label;" preference="RYMEnhancer_ratings_10scale" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.artist_averageratings.label;" preference="RYMEnhancer_artist_averageratings" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.artist_showsplitratings.label;" preference="RYMEnhancer_artist_showsplitratings" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.ratings_colour.label;" preference="RYMEnhancer_ratings_colour" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.lists_highlightrated.label;" preference="RYMEnhancer_lists_highlightrated" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.lists_highlightowned.label;" preference="RYMEnhancer_lists_highlightowned" />
+    <checkbox flex="1" label="&rym_site_enhancer_prefs.lists_highlightwishlisted.label;" preference="RYMEnhancer_lists_highlightwishlisted" />
+  </vbox>
+
+ </groupbox>
+ </hbox>
+
+  </prefpane>
+</prefwindow>
