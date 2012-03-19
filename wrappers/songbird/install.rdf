@@ -13,11 +13,21 @@
 
     <em:optionsURL>chrome://ratebird/content/options.xul</em:optionsURL>
 
+    <!-- Songbird -->
     <em:targetApplication>
       <Description>
         <em:id>songbird@songbirdnest.com</em:id>
         <em:minVersion>1.9.0</em:minVersion>
-        <em:maxVersion>1.11.9</em:maxVersion>
+        <em:maxVersion>1.12.0a</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <!-- Nightingale -->
+    <em:targetApplication>
+      <Description>
+        <em:id>nightingale@getnightingale.com</em:id>
+        <em:minVersion>1.11.0a</em:minVersion>
+        <em:maxVersion>1.12.0a</em:maxVersion>
       </Description>
     </em:targetApplication>
     
