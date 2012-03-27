@@ -187,9 +187,8 @@ function ratebird() {
       
 	    //check for changed data
 	    if(that.prefs.enable_writing && that.mediaItemArray.length > 0) {
-		// Data has been changed so write ratings metadata to files
-		// Defer a tick, as the job manager may launch a dialog which 
-		// at this time will totally lock up the player.
+		// Data has been changed so write ratings metadata to files.
+		// Defer a tick, as the job manager may launch a dialog which at this time will totally lock up the player.
 		setTimeout(function() {
 		    propArray = ArrayConverter.stringEnumerator([SBProperties.rating]);
 		    job = that.metaDataService.write(that.mediaItemArray, propArray);

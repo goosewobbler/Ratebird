@@ -2,7 +2,7 @@
 
 var ratebird = (function () {
     var contracts = {}, channels = {}, modules = {};
-    var onload_objs = [];
+    var onload_fns = [];
     var registry = {
         'error': function (msg) {
             throw {
@@ -12,8 +12,8 @@ var ratebird = (function () {
         },
         'onload': function () {
             var i;
-            for (i = 0; i < onload_objs.length; i++) {
-                onload_objs[i].onload();
+            for (i = 0; i < onload_fns.length; i++) {
+                onload_fns[i]();
             }
         },
         'define': function (name, dependencies, obj, force) {
@@ -25,8 +25,8 @@ var ratebird = (function () {
                 modules[name] = function() {
                     obj.apply(obj, dependency_objs);
                 };
-                if (obj.onload != null) {
-                    onload_objs.push(obj);
+                if (typeof obj.onload === 'Function') {
+                    onload_fns.push(obj.onload);
                 }
                 return obj;
             }
@@ -114,12 +114,12 @@ var ratebird = (function () {
         'load': registry.onload,
         'define': registry.define,
         'require': function() {
-            var i, args = Array.prototype.slice.call(arguments, 1);            
+            var i, dependencies = {}, args = Array.prototype.slice.call(arguments, 1);            
             if(typeof args[1] === 'Function') {
-                return registry.get(this, args[0]);
+                return registry.get(args[0]);
             } else {
                 for (i = 0; i < args[0].length; i++) {
-                    dependencies.push(registry.get(this, args[0][i]));
+                    dependencies[args[0][i]] = registry.get(args[0][i]);
                 }
                 return args[1].apply(args[1], dependencies);
             }

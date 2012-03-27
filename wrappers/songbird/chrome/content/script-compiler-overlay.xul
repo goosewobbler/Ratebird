@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <overlay xmlns='http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul'>
-    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/xmlhttprequester.js'></script>
-    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/prefman.js'></script>
-    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/script-compiler.js'></script>
+    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/ratebird.js'></script>
+    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/requester.js'></script>
+    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/pref-manager.js'></script>
+    <script type='application/x-javascript' src='chrome://ratebird/content/scripts/script-manager.js'></script>
+    <script type='application/x-javascript'>
+        window.addEventListener('load', ratebird.load, false);
+    </script>
 </overlay>
